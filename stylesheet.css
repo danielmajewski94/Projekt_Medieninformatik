@@ -1,5 +1,5 @@
 .bildericon {
-    width: 100%;
+    width: 100pt;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
@@ -18,9 +18,13 @@
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 5pt;
     cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    gap: 1pt;
 }
 
 * {
@@ -40,6 +44,17 @@
     padding: 20px;
     border: 1px solid #ccc;
     text-align: center;
+}
+
+.cell-1 {
+    grid-column: span 2;
+}
+
+.cell-2 {
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 768px) {
