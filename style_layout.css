@@ -12,6 +12,8 @@
     padding: 20px;
     border: 1px solid #ccc;
     text-align: center;
+    width: auto;
+    max-width: 100%;
 }
 
 .cell-1 {
@@ -27,16 +29,21 @@
 
 @media screen and (max-width: 768px) {
     .grid-container {
+        grid-template-columns: 1fr 1fr !important;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        /* Zwei Spalten */
+        gap: 16px;
+        margin-left: 10pt;
+        margin-right: 10pt;
+        /*grid-auto-rows: minmax(50pt, 100pt);*/
     }
 }
 
 @media screen and (max-width: 480px) {
     .grid-container {
-        grid-template-columns: 1fr;
-        /* Eine Spalte */
+        grid-template-columns: 1fr !important;
+        display: grid;
+        gap: 16px;
+        margin-left: 10pt;
+        margin-right: 10pt;
     }
 }
