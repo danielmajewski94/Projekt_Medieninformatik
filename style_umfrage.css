@@ -1,0 +1,9 @@
+.question {
+    display: none;
+    /* Fragen sind initial versteckt */
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
