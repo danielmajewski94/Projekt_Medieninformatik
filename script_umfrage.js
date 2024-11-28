@@ -16,11 +16,19 @@ function nextStep() {
             document.getElementById('q2-hochzeit').style.display = 'block';
         } else if (selectedValue.value === "familie") {
             document.getElementById('q2-familie').style.display = 'block';
+        } else {
+            currentStep++;
         }
 
         // Verstecke die erste Frage
         document.getElementById('question1').style.display = 'none';
         currentStep++;
+
+        if (currentStep === 3) {
+            document.getElementById('q3-zeit').style.display = 'block';
+        }
+
+        console.log(currentStep);
     } else if (currentStep === 2) {
         // Antwort von Frage 2 sammeln
         const checkboxes = document.querySelectorAll('.question input[type="checkbox"]:checked');
@@ -58,4 +66,8 @@ function nextStep() {
         console.log("Gesammelte Antworten:", answers);
         currentStep = 0;
     }
+}
+
+function close() {
+    alert("Hallo, das ist eine Methode!");
 }

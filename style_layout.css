@@ -1,9 +1,9 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-left: 10pt;
-    margin-right: 10pt;
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    padding: 20px;
     /*grid-auto-rows: minmax(50pt, 100pt);*/
 }
 
@@ -29,12 +29,20 @@
 
 @media screen and (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr 1fr !important;
         display: grid;
-        gap: 16px;
-        margin-left: 10pt;
-        margin-right: 10pt;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto;
+        gap: 20px;
+        padding: 10px;
         /*grid-auto-rows: minmax(50pt, 100pt);*/
+    }
+
+    .cell-1 {
+        grid-column: span 1;
+    }
+
+    .cell-2 {
+        grid-column: span 2;
     }
 }
 
@@ -45,5 +53,13 @@
         gap: 16px;
         margin-left: 10pt;
         margin-right: 10pt;
+    }
+
+    .cell-1 {
+        grid-column: span 1;
+    }
+
+    .cell-2 {
+        grid-column: span 1;
     }
 }
