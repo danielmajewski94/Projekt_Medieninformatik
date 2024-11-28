@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="style_umfrage.css">
     <link rel="stylesheet" href="style_layout.css">
     <script src="script_umfrage.js" defer></script>
+    <script src="script_calendar.js" defer></script>
 </head>
 
 <body>
@@ -275,8 +276,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="ModalKarriereLabel">Karrierelaufbahn</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"
-                        onclick="close()"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
                 </div>
                 <div class="modal-body">
                     <!-- Frage 1 -->
@@ -369,8 +369,35 @@
                     <div id="q4-budget" class="question quest">
                         <p>Wie viel möchtest du ungefähr ausgeben?</p>
                         <input type="number" name="budget-option" value="time" step="50" min="0">
+                        <button type="button" onclick="nextStep()">Weiter</button>
+                    </div>
+
+
+                    <div id="q5-calendar" class="calendar-container question quest">
+                        <div class="calendar-header">
+                            <div class="month-navigation">
+                                <button id="prevMonth">&laquo; Vorheriger Monat</button>
+                                <button id="nextMonth">Nächster Monat &raquo;</button>
+                            </div>
+                            <h2 id="calendarYearMonth"></h2>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <div>Mo</div>
+                            <div>Di</div>
+                            <div>Mi</div>
+                            <div>Do</div>
+                            <div>Fr</div>
+                            <div>Sa</div>
+                            <div>So</div>
+                        </div>
+                        <div class="calendar-grid" id="calendar"></div>
+
+                        <!-- Uhrzeitauswahl -->
+                        <div class="time-selection" id="timeSelection"></div>
                         <button type="button" onclick="nextStep()">Abschließen</button>
                     </div>
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>

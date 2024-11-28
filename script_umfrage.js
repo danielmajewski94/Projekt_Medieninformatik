@@ -61,6 +61,11 @@ function nextStep() {
         }
         answers.push({ question: "Wie viel möchtest du ungefähr ausgeben?", answer: budgetInput.value });
 
+        // Verstecke die dritte Frage und zeige die vierte (Budget)
+        document.getElementById('q4-budget').style.display = 'none';
+        document.getElementById('q5-calendar').style.display = 'block';
+        currentStep++;
+    } else if (currentStep === 5) {
         // Umfrage abschließen
         alert("Vielen Dank für Ihre Teilnahme!");
         console.log("Gesammelte Antworten:", answers);
@@ -68,6 +73,6 @@ function nextStep() {
     }
 }
 
-function close() {
-    alert("Hallo, das ist eine Methode!");
-}
+document.getElementById("ModalUmfrage").addEventListener("hidden.bs.modal", function () {
+    currentStep = 0;
+});
