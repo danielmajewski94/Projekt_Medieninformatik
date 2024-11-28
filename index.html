@@ -298,7 +298,6 @@
                             <input type="radio" name="question1" value="Kirchlich">
                             Taufe/Kommunion/Firmung/Konfirmation
                         </label>
-                        <button type="button" onclick="nextStep()">Weiter</button>
                     </div>
 
                     <!-- Frage 2: Hochzeit -->
@@ -331,7 +330,6 @@
                         <label>
                             <input type="checkbox" name="hochzeit-options" value="partybilder"> Partybilder
                         </label>
-                        <button type="button" onclick="nextStep()">Weiter</button>
                     </div>
 
                     <!-- Frage 2: Familie -->
@@ -355,31 +353,28 @@
                         <label>
                             <input type="checkbox" name="familie-options" value="freunde"> Freunde
                         </label>
-                        <button type="button" onclick="nextStep()">Weiter</button>
                     </div>
 
                     <!-- Frage 2: Zeit -->
                     <div id="q3-zeit" class="question quest">
                         <p>Wie lange soll maximal der Fotograf anwesend sein?</p>
                         <input type="number" name="time-option" value="time" step="1" min="0">
-                        <button type="button" onclick="nextStep()">Weiter</button>
                     </div>
 
                     <!-- Frage 2: Budget -->
                     <div id="q4-budget" class="question quest">
                         <p>Wie viel möchtest du ungefähr ausgeben?</p>
                         <input type="number" name="budget-option" value="time" step="50" min="0">
-                        <button type="button" onclick="nextStep()">Weiter</button>
                     </div>
 
 
                     <div id="q5-calendar" class="calendar-container question quest">
                         <div class="calendar-header">
                             <div class="month-navigation">
-                                <button id="prevMonth">&laquo; Vorheriger Monat</button>
-                                <button id="nextMonth">Nächster Monat &raquo;</button>
+                                <button id="prevMonth">&laquo;</button>
+                                <h2 id="calendarYearMonth"></h2>
+                                <button id="nextMonth">&raquo;</button>
                             </div>
-                            <h2 id="calendarYearMonth"></h2>
                         </div>
                         <div class="calendar-weekdays">
                             <div>Mo</div>
@@ -394,13 +389,12 @@
 
                         <!-- Uhrzeitauswahl -->
                         <div class="time-selection" id="timeSelection"></div>
-                        <button type="button" onclick="nextStep()">Abschließen</button>
                     </div>
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+                    <button type="button" class="nextStep" onclick="nextStep()">Weiter</button>
                 </div>
             </div>
         </div>

@@ -14,6 +14,31 @@ div.quest>p {
     margin-bottom: 10px;
 }
 
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: green;
+    vertical-align: sub;
+    /* Ändert die Farbe (modernere Browser unterstützen dies) */
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: green;
+    vertical-align: sub;
+    /* Ändert die Farbe (modernere Browser unterstützen dies) */
+}
+
+.nextStep {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 
 /* Kalender */
@@ -21,10 +46,10 @@ div.quest>p {
 .calendar-container {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 100%;
 }
 
 .calendar-header {
@@ -38,8 +63,10 @@ div.quest>p {
 }
 
 .month-navigation {
-    display: flex;
+    display: contents;
     gap: 10px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .month-navigation button {
