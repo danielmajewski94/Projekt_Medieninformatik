@@ -1,0 +1,14 @@
+.step {
+    display: none;
+    /* Fragen sind initial versteckt */
+}
+
+.tooltip_span {
+    text-decoration: underline;
+}
+
+.content_style {
+    display: flex;
+    gap: 20px;
+    vertical-align: top;
+}

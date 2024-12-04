@@ -16,9 +16,11 @@
     <link rel="stylesheet" href="style_card.css">
     <link rel="stylesheet" href="style_timeline.css">
     <link rel="stylesheet" href="style_umfrage.css">
+    <link rel="stylesheet" href="style_vorstellung.css">
     <link rel="stylesheet" href="style_layout.css">
     <script src="script_umfrage.js" defer></script>
     <script src="script_calendar.js" defer></script>
+    <script src="script_vorstellung.js" defer></script>
 </head>
 
 <body>
@@ -129,13 +131,16 @@
             </div>
         </div>
         <div class="item">
-            <video id="video_containter" class="video-js vjs-default-skin vjs-fluid vjs-big-play-centered" controls
-                preload="none" width="100%" poster="" data-setup="{}" style="background-color:#fff;">
-                <source src="Video/Bildbearbeitungsvideo.mp4" type="video/mp4" />
-                <!--
-                
-                -->
-            </video>
+            <div class="card">
+                <img src="Bilder/DSC_5161Lr.jpg" alt="Fotograf" class="card-img">
+                <div class="card-body">
+                    <h5 class="card-title">Karrierelaufbahn als Fotograf</h5>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalVorstellung">Schreib
+                        mir!</button>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -406,10 +411,113 @@
         </div>
     </div>
 
+    <!-- Modal für Vorstellung -->
+    <div class="modal" id="ModalVorstellung" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalKarriereLabel">Karrierelaufbahn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="step1_gruss">
+                        <div class="content_style">
+                            <div>
+                                <h2>Hallo</h2>
+                                <p>
+                                    Mein Name ist Daniel Majewski. Ich arbeite nun seit einigen Jahren nebentätig als
+                                    Fotograf.
+                                    Eingelernt wurde ich über die Jahre durch andere Fotografen, wo ich auf Aufträge
+                                    Erfahrungen
+                                    sammeln konnte. In den nächsten Seiten werde ich mich euch genauer vorstellen und
+                                    zeigen, wie
+                                    ich arbeite.
+                                </p>
+                            </div>
+                            <img src="Bilder/DSC_5161Lr.jpg" width="30%">
+                        </div>
+                    </div>
+
+                    <div id="step2_hardware" class="step">
+                        <p>
+                        <h2>Kameratechnik</h2>
+                        Ich verwende zum Fotografieren Kameras und Objektive der Marke Canon. Dabei handelt es sich um
+                        Spiegelreflex und spiegelloser Systemkamera. Hauptsächlich verwende ich hier die Systemkamera
+                        Canon EOS R6 und ich die Spiegelreflexkamera Canon EOS 5D Mark III. Zur Reserve habe ich jedoch
+                        immer noch die Spiegelreflexkamera Canon EOS 70D dabei.</p>
+                        <p>An Objektive verwende ich das
+                            <span class="tooltip_span" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-toggle="tooltip" data-bs-html="true"
+                                data-bs-title="Brennweite/Zoom: 70-200mm<br/>Blende: 2.8<br>Serie L Variante II<br>IS: Image Stabilisation/Bildstabilisator<br>USM: Ultraschallmotor">
+                                Canon EF 70-200mm f2.8 L II IS USM</span> (im Bild links) für
+                            Portrait- und Situationsaufnahmen, das <span class="tooltip_span" data-bs-toggle="tooltip"
+                                data-bs-placement="top" data-bs-toggle="tooltip" data-bs-html="true"
+                                data-bs-title="Brennweite/Zoom: 24-70mm<br/>Blende: 2.8<br>Serie L Variante II<br>USM: Ultraschallmotor">Canon
+                                EF 24-70mm f2.8
+                                L II USM</span> (im Bild an der
+                            mittleren Kamera montiert) für Situations- und ggf. Portraitaufnahmen und das <span
+                                class="tooltip_span" data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-toggle="tooltip" data-bs-html="true"
+                                data-bs-title="Brennweite/Zoom: 100mm (Festbrennweite)<br/>Blende: 2.8<br>MACRO: Macroobjektiv<br>Serie L Variante I<br>IS: Image Stabilisation/Bildstabilisator<br>USM: Ultraschallmotor">Canon
+                                EF 100mm
+                                MACRO f2.8 L IS USM</span> (im Bild rechts) für Macroaufnahmen, wie z. B. Ringbilder auf
+                            Hochzeiten.
+                        </p>
+                        <img src="Bilder/IMG_2822-Hardware.png" class="bild">
+                    </div>
+                    <div id="step3_style" class="step">
+                        <div class="content_style">
+                            <div>
+                                <h2>Mein Bildstil</h2>
+                                <p>
+                                    Bei meinen Bildern verzichte ich bewusst auf Filter und Farbveränderungen. Meine
+                                    Bilder
+                                    werden
+                                    so natürlich wie möglich gehalten und Effekte werden ohne ausdrücklichen Wunsch des
+                                    Kunden
+                                    nicht
+                                    eingefügt. Durch die kleine Blendenzahl von 2.8, die sie auf der vorherigen Seite
+                                    mit bei
+                                    den
+                                    Objektiven angegeben wurden, erreiche ich, dass das Objekt/die Person vom
+                                    Hintergrund
+                                    hervorgehoben wird.
+                                </p>
+                            </div>
+                            <img src="Bilder/BX3A4429.png" width="30%">
+                        </div>
+                    </div>
+                    <div id="step4_video" class="step">
+                        <p>
+                        <h2>Das passiert mit euren Bildern</h2>
+                        Im folgenden Video zeige ich euch, wie ich mit euren Bildern im Anschluss des Events
+                        arbeite.
+                        </p>
+                        <video id="video_container" class="video-js vjs-default-skin vjs-fluid vjs-big-play-centered"
+                            controls preload="auto" poster="" style="background-color:#fff;" width="100%">
+                            <source src="Video/Bildbearbeitungsvideo.mp4" type="video/mp4" />
+                            Ihr Browser unterstützt dieses Videoformat nicht.
+                        </video>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="button_gruss" type="button" class="nextStep" onclick="StepNext()">Weiter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <footer class="footer">
         <p>© 2024 Mein Unternehmen</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+            const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        });
+    </script>
 
 </body>
 
