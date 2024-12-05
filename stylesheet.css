@@ -19,7 +19,7 @@
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 5pt;
     cursor: pointer;
     text-align: center;
@@ -59,4 +59,18 @@
 
 .txt1 {
     font-size: 18pt;
+}
+
+@media screen and (max-width: 768px) {
+
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
