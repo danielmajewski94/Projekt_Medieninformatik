@@ -80,7 +80,7 @@
     height: 360px;
     width: 300px;
     background-color: #fff;
-    margin: 100px auto;
+    margin: 30px auto;
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -174,7 +174,7 @@ i {
 .card_contact_body ul li h4 {
     left: 58px;
     color: #16a085;
-
+    margin-bottom: .0rem;
 }
 
 .card_contact_body ul li p {
