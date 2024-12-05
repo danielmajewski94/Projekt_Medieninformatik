@@ -68,3 +68,195 @@
     background-color: #0056b3;
     /* Farbe beim Hover */
 }
+
+
+
+
+
+
+
+.card_contact {
+    position: relative;
+    height: 360px;
+    width: 300px;
+    background-color: #fff;
+    margin: 100px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card_contact_header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    width: 95%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(to right, #1dd1a1, #1abc9c);
+    padding-top: 10px;
+}
+
+.card_contact_header img {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-row: 1;
+}
+
+.card_contact_header h3 {
+    font-family: sans-serif;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0;
+    grid-row: 2;
+}
+
+.card_contact_header p {
+    font-family: sans-serif;
+    color: rgb(236, 233, 233);
+    font-size: 13px;
+    margin: 0;
+    margin-top: 0px;
+    grid-row: 3;
+}
+
+
+
+.card_contact_body {
+    position: absolute;
+    height: 126px;
+    left: 5px;
+    right: 5px;
+    top: 52%;
+    border-radius: 12px;
+}
+
+.card_contact_body ul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+
+}
+
+.card_contact_body ul li {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.card_contact_body ul li p,
+h4,
+i {
+    position: absolute;
+}
+
+.card_contact_body ul li h4 {
+    left: 58px;
+    color: #16a085;
+
+}
+
+.card_contact_body ul li p {
+    top: 14px;
+    left: 59px;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #16a085;
+}
+
+.card_contact_body ul li i {
+    left: 8px;
+    color: #16a085;
+    font-size: 26px;
+}
+
+.card_contact_body ul li:nth-child(1) {
+    top: -16px;
+}
+
+.card_contact_body ul li:nth-child(2) {
+    top: 26px;
+}
+
+.card_contact_body ul li:nth-child(3) {
+    top: 68px;
+}
+
+.card_contact_body ul li:nth-child(1) i {
+    left: 12px;
+}
+
+.card_contact_body li:hover {
+    background-color: #16a085;
+    cursor: pointer;
+}
+
+.card_contact_body li:hover i {
+    color: #fff
+}
+
+.card_contact_body li:hover h4 {
+    color: #fff
+}
+
+.card_contact_body li:hover p {
+    color: #fff
+}
+
+/*footer*/
+
+.card_contact_footer {
+    position: absolute;
+    height: 80px;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    width: 95%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(to right, #1dd1a1, #1abc9c);
+}
+
+.card_contact_footer ul {
+    position: absolute;
+    left: -60px;
+}
+
+.card_contact_footer ul li {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+.card_contact_footer ul li i {
+    font-size: 30px;
+    color: #000;
+    transition: all .3s ease-in;
+}
+
+.card_contact_footer ul li:hover i {
+    transform: scale(0.9);
+    color: #fff;
+    cursor: pointer;
+}
