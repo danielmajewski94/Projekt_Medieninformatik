@@ -62,7 +62,7 @@
 .style_layout_nav {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-image: linear-gradient(to right, #1dd1a1, #1abc9c);
+    background-image: linear-gradient(to right, #0048b1, #005feb);
 }
 
 /* Optional: Sicherstellen, dass die Textfarbe der Navbar gut lesbar ist */
