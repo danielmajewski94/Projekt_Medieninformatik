@@ -39,6 +39,7 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
+    object-position: 0% 63%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     /* Bild wird so skaliert, dass es den Bereich ausfüllt */
