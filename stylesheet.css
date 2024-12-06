@@ -28,6 +28,17 @@
     gap: 1pt;
 }
 
+.image-grid-Vier-Bilder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5pt;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    gap: 1pt;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -36,8 +47,9 @@
 
 .Modal-button {
     width: 100%;
-    height: 100%;
-    min-height: 200pt;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border: 10px solid;
     border-color: rgb(8, 77, 15);
     background-image: var(--background-image);
@@ -45,19 +57,21 @@
     background-repeat: no-repeat;
     background-position: center;
     color: white;
-    font-size: 40px;
+    font-size: 3vw;
     font-weight: bold;
     cursor: pointer;
     opacity: 0.8;
+    margin: 0 auto;
 }
 
 .Modal-button:hover {
-    border: 10px Inset;
+    border: 10px inset;
     border-color: rgb(8, 77, 15);
     color: rgb(8, 77, 15);
     background-size: 120%;
     filter: brightness(100%);
 }
+
 
 .footer {
     color: white;
