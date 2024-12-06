@@ -69,7 +69,7 @@ function nextStep() {
         // Umfrage abschließen
         alert("Vielen Dank für Ihre Teilnahme!");
         console.log("Gesammelte Antworten:", answers);
-        currentStep = 0;
+        currentStep = 1;
     }
 }
 
