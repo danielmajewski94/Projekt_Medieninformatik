@@ -93,7 +93,7 @@
                             <h4>0157xxxxxxxxxxxx</h4>
                             <i class="fas fa-mobile-alt"></i>
                         </li>
-                        <li>
+                        <li data-bs-toggle="modal" data-bs-target="#ModalKontakt">
                             <h4>daniel.majewski@iu-study.org</h4>
                             <i class="fas fa-envelope"></i>
                         </li>
@@ -142,7 +142,7 @@
             </div>
         </div>
         <div class="item">
-            <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalKarriere"
+            <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalFAQ"
                 style="--background-image: url('Bilder/png/BX3A9256.png')">FAQ</button>
         </div>
         <div class="item">
@@ -249,15 +249,203 @@
     </div>
 
     <!-- Modal für Karrierelaufbahn -->
-    <div class="modal" id="ModalKarriere" tabindex="-1">
+    <div class="modal" id="ModalFAQ" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="ModalKarriereLabel">Karrierelaufbahn</h5>
+                    <h5 class="modal-title" id="ModalKarriereLabel">FAQs</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
                 </div>
                 <div class="modal-body">
-
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Was kostet mich mein Event?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Der Preis richtet sich nach der Größe und zeitlichen Ablauf deinen Event. Um einen
+                                    Kostenvoranschlag von mir zu halten, buchen Sie einen Termin über den Button
+                                    Terminbuchung auf meiner Website. In den Preis inbegriffen sind:
+                                    <ul>
+                                        <li>Leistung am Tag der Veranstaltung für die vereinbarte Dauer</li>
+                                        <li>Bearbeitungszeit für die Bilder</li>
+                                        <li>Die daraus entstandenen Mehrkosten durch Wasser und Strom</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Welche Nebenkosten fallen bei einen Auftrag mit an?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Neben den Kosten für das Event fallen noch Fahrtkosten an. Diese belaufen sich
+                                    auf 0,30 € pro Kilometer hin und zurück ab der von mir auf der Website angegebenen
+                                    Adresse:<br><br>
+                                    <p>Am Madenbach 19<br>97708 Bad Bocklet</p>
+                                    Zusätzlich fallen eventuell Übernachtungskosten an, falls die Anreise über 200km
+                                    beträgt. Diese wird bei der Besprechung mit angesprochen.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Bieten Sie auch Videoaufnahmen an?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Nein, meine Leistungen beziehen sich lediglich auf Fotografie und Bildbearbeitung.
+                                    Videoaufnahmen werden von mir nicht mit angeboten.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Arbeiten Sie alleine oder haben Sie ein Team?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Ich arbeite alleine. Erwarten sie entsprechend einen weiteren Fotografen, müssen sie
+                                    diesen selbst organisieren.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Können wir Ihr Angebot individuell anpassen?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Ich bin offen für Ihre Wünsche.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Was ist in Ihren Paketen enthalten (z. B. Anzahl der Fotos, Stundenanzahl)?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Die Stundenzahl wird bei der Besprechung über Ihren Event mit festgelegt. Diese
+                                        kann
+                                        ggf. nachträglich jederzeit angepasst.</p>
+                                    <p>Sie erhalten von mir am Ende des Events nach
+                                        spätestens <strong>vier Wochen</strong> Ihre Bilder. Unter unvorhersehbaren
+                                        Gründen
+                                        kann wie Wartezeit im Nachhinein sich verzögern. Sollte sich die Wartezeit durch
+                                        absehbaren Gründen verzögern, erhalten Sie rechtzeitig eine Anpassung dieser.
+                                    </p>
+                                    <p>
+                                        Die Bilder werden von mir Digital übergeben. Professioneller Druck gehört nicht
+                                        zu
+                                        meinen Paket dazu. Die Zahl der von mir erhaltenen Bildern ist nicht
+                                        abschätzbar, da
+                                        Sie von mir jedes Bild erhalten, dass den Qualitätsanspruch meinerseits
+                                        entspricht.
+                                        Brautpaarbilder werden von mir individuell begrenzt. Sie können aber jederzeit
+                                        weitere Brautpaarbilder wünschen. Diese werden i. d. R. online übergeben. Dafür
+                                        setze ich mich mit Ihnen in Verbindung, sobald es so weit ist, dass Sie die
+                                        ersten Bilder herunterladen können.
+                                    </p>
+                                    <p>
+                                        Filter werden von mir i. d. R. nicht auf die Bilder aufgetragen. Genauso wie ein
+                                        Wasserzeichen oder eine Unterschrift. Nach Absprache können wir hier gerne über
+                                        Wünsche der Veranstalter reden.
+                                    </p>
+                                    <p>
+                                        Die Bilder werden von mir für <strong>zwei Jahre</strong> auf einer externen
+                                        Festplatte gesichert
+                                        incl. einen Backup auf einer zweiten Festplatte. Nach Ablauf der <strong>zwei
+                                            Jahre</strong> wird
+                                        das Backup incl. den von mir vorgenommenen Bearbeitungen gelöscht. Ihre Bilder
+                                        sind dann noch weitere <strong>drei Jahre</strong> in Roh-Form auf einer
+                                        externen Festplatte
+                                        gespeichert. Eine Neubearbeitung kann zu weiteren Kosten führen. Nach Ablauf der
+                                        <strong>fünf Jahre</strong> werden Ihre Bilder endgültig gelöscht. Sollten diese
+                                        weiterhin von
+                                        mir aufbewahrt werden, muss dies mit mir abgesprochen werden. Dabei können
+                                        ebenfalls zusätzliche Kosten anfallen. Keine Gewährleistung bei höherer Gewalt.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSeven" aria-expanded="false"
+                                        aria-controls="collapseSeven">
+                                        Sind Sie bereit, an unsere Wunschlocation zu reisen?
+                                    </button>
+                                </h2>
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Für den Anreiseort bin ich flexibel. Beachten Sie hier die Anfahrtskosten,
+                                        welche unter der Frage über die Nebenkosten in der FAQ beschrieben wird.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseEight" aria-expanded="false"
+                                        aria-controls="collapseEight">
+                                        Haben Sie Ersatzkameras oder Equipment für den Fall eines Defekts?
+                                    </button>
+                                </h2>
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Ich trage immer mindestens zwei Kameras bei mir. Eine dritte ist in Laufweite
+                                        erreichbar. Eine genauere Besprechung meiner Ausrüstung finden Sie in meiner
+                                        Vorstellungsrunde auf der Website.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseNine" aria-expanded="false"
+                                        aria-controls="collapseNine">
+                                        Können Sie Drohnenaufnahmen machen?
+                                    </button>
+                                </h2>
+                                <div id="collapseNine" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Eine Drohne besitze ich nicht. Sind Drohnenaufnahmen gewünscht, muss diese
+                                        gestellt werden. Nach einer kurzen Unterweisung, kann ich dies gerne
+                                        organisieren und mich um die Aufnahmen kümmern.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
