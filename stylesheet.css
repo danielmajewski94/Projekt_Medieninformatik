@@ -111,4 +111,8 @@
     .image-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .Modal-button {
+        font-size: 5vw;
+    }
 }

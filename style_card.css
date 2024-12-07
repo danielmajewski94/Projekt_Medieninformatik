@@ -78,7 +78,8 @@
 .card_contact {
     position: relative;
     height: 360px;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     background-color: #fff;
     margin: 30px auto;
     border-radius: 12px;
@@ -259,4 +260,18 @@ i {
 .card_contact_footer ul li:hover i {
     transform: scale(0.9);
     cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+    .card_contact_footer ul li i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .card_contact_footer ul li i {
+        font-size: 30px;
+    }
 }
