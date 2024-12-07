@@ -49,7 +49,7 @@
     width: 100%;
     max-width: 400px;
     height: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 2;
     border: 10px solid;
     border-color: rgb(8, 77, 15);
     background-image: var(--background-image);
@@ -57,19 +57,18 @@
     background-repeat: no-repeat;
     background-position: center;
     color: white;
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: bold;
     cursor: pointer;
     opacity: 0.8;
     margin: 0 auto;
+    transition: all 0.3s ease;
 }
 
 .Modal-button:hover {
-    border: 10px inset;
-    border-color: rgb(8, 77, 15);
     color: rgb(8, 77, 15);
     background-size: 120%;
-    filter: brightness(100%);
+    transition: none;
 }
 
 
