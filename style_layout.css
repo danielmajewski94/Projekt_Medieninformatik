@@ -16,6 +16,10 @@
     max-width: 100%;
 }
 
+.empty-item {
+    display: none;
+}
+
 .cell-1 {
     grid-column: span 2;
 }
@@ -95,6 +99,10 @@
     .cell-2 {
         grid-column: span 2;
     }
+
+    .empty-item {
+        display: block;
+    }
 }
 
 
@@ -120,6 +128,10 @@
         width: 100%;
         box-sizing: border-box;
     }
+
+    .empty-item {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -137,5 +149,9 @@
 
     .cell-2 {
         grid-column: span 1;
+    }
+
+    .empty-item {
+        display: none;
     }
 }

@@ -15,13 +15,14 @@
 
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="style_card.css">
-    <link rel="stylesheet" href="style_timeline.css">
     <link rel="stylesheet" href="style_umfrage.css">
     <link rel="stylesheet" href="style_vorstellung.css">
     <link rel="stylesheet" href="style_layout.css">
+    <link rel="stylesheet" href="style_kundenbewertung.css">
     <script src="script_umfrage.js" async></script>
     <script src="script_calendar.js" async></script>
     <script src="script_vorstellung.js" async></script>
+    <script src="script_kundenbewertung.js" async></script>
 </head>
 
 <body>
@@ -153,6 +154,35 @@
             <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalVorstellung"
                 style="--background-image: url('Bilder/png/IMG_8634.png')">Vorstellungsrunde!</button>
         </div>
+        <div class="item empty-item">
+        </div>
+        <div class="item">
+            <div id="drop-area" class="drop-area">
+                <p id="drop-text">Ziehe dein Bild hier her oder <span class="browse-link">Durchsuchen</span></p>
+                <input type="file" id="fileInput" multiple hidden>
+            </div>
+            <img id="preview" alt="Bildvorschau" style="display: none;">
+        </div>
+        <div class="item cell-1" style="text-align: left;">
+            <h4>Möchtest du mich bewerten?</h4>
+            <p>
+            <div class="star-rating">
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1" title="1 Stern">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2" title="2 Sterne">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3" title="3 Sterne">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4" title="4 Sterne">&#9733;</label>
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5" title="5 Sterne">&#9733;</label>
+            </div>
+            </p>
+            <p>
+                <textarea name="Rating-Textarea" id="" style="width: 100%; height: auto;"></textarea>
+            </p>
+        </div>
     </div>
 
 
@@ -242,7 +272,6 @@
                     <button type="button" class="btn btn-primary">
                         <i class="fas fa-envelope"></i>
                     </button>
-
                 </div>
             </div>
         </div>
