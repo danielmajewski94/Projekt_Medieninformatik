@@ -1,7 +1,8 @@
 .drop-area {
     width: 100%;
     max-width: 400px;
-    height: 150px;
+    height: auto;
+    min-height: 150pt;
     border: 2px dashed #08A045;
     border-radius: 10px;
     display: flex;
@@ -62,4 +63,58 @@
 
 .star-rating .selected {
     color: gold;
+}
+
+#Rating-Textarea {
+    border: 0pt;
+    border-left: 2px solid #084D0F;
+    border-top: 2px solid #084D0F;
+    min-height: 50pt;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.Rating-Texttitle {
+    border: 0pt;
+    border-left: 2px solid #084D0F;
+    border-bottom: 2px solid #084D0F;
+    height: auto;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.form-floating>.form-control-plaintext~label,
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
+    color: rgba(var(--bs-body-color-rgb), .65);
+    transform: scale(.85) translateY(-1.2rem) translateX(.15rem);
+}
+
+.Rating-Texttitle:hover {
+    border: 3px solid #06C439;
+}
+
+#Rating-Textarea:hover {
+    border: 3px solid #06C439;
+}
+
+.Rating-Accordion {
+    width: 100%;
+}
+
+.Rating-img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+.Rating-accordion-body {
+    display: flex;
+    text-align: left;
+}
+
+.rating-acc-header {
+    font-size: 16pt;
 }

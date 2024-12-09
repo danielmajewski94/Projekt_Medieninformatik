@@ -4,6 +4,30 @@ const dropText = document.getElementById('drop-text');
 const fileInput = document.getElementById('fileInput');
 const preview = document.getElementById('preview');
 
+var Bewertungen = [
+    {
+        id: 1,
+        Bild: "Bilder/IMG_9496.jpg",
+        Sterne: 3,
+        Titel: "Gut!",
+        Bewertung: "Sehr solide und toll"
+    },
+    {
+        id: 3,
+        Bild: "Bilder/IMG_4001.jpg",
+        Sterne: 5,
+        Titel: "Perfekt!",
+        Bewertung: "Einfach super perfekt."
+    },
+    {
+        id: 2,
+        Bild: "Bilder/BX3A4429.png",
+        Sterne: 1,
+        Titel: "Kacke!",
+        Bewertung: "Einfach scheiß Bilder"
+    }
+];
+
 // Simulate click on the hidden file input when clicking the "Durchsuchen" link
 document.querySelector('.browse-link').addEventListener('click', () => {
     fileInput.click();
@@ -90,5 +114,55 @@ function updateStars(rating) {
         } else {
             star.classList.remove('selected'); // Entfernt die goldene Farbe
         }
+    });
+}
+
+window.onload = function () {
+    generateAccordion();
+};
+function generateAccordion() {
+    // Referenz auf das Akkordeon-Element
+    var RatingAccordion = document.getElementById('Rating-Accordion');
+
+    // Iteriere durch die Bewertungen und erstelle für jede ein Accordion-Item
+    Bewertungen.forEach(function (bewertung, index) {
+        // Erstelle ein neues Accordion-Item
+        var accordionItem = document.createElement('div');
+        accordionItem.classList.add('accordion-item');
+
+        var HTMLText = ``;
+
+        // Setze den HTML-Inhalt für das Accordion-Item
+        HTMLText = `
+            <h2 class="accordion-header" id="rating-heading-${bewertung.id}-${index}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                        data-bs-target="#rating-collapse-${bewertung.id}-${index}" aria-expanded="false" aria-controls="rating-collapse-${bewertung.id}-${index}"><div class="rating-acc-header">
+        `;
+
+        // Füge die Sterne hinzu
+        for (i = 0; i < 5; i++) {
+            if (i < bewertung.Sterne) {
+                HTMLText = HTMLText + `<span style="color: gold">&#9733;</span>`;
+            } else {
+                HTMLText = HTMLText + `<span style="color: lightgray">&#9733;</span>`;
+            }
+        }
+
+        HTMLText = HTMLText + ` <strong>${bewertung.Titel}</strong>
+                </div></button>
+            </h2>
+            <div id="rating-collapse-${bewertung.id}-${index}" class="accordion-collapse collapse" aria-labelledby="rating-heading-${bewertung.id}-${index}" data-bs-parent="#Rating-Accordion">
+                <div class="accordion-body">
+                    <div class="Rating-accordion-body">
+                        <img src="${bewertung.Bild}" alt="Bewertung Bild" class="Rating-img">
+                        <p>${bewertung.Bewertung}</p>
+                    </div>
+                </div>
+            </div>`;
+
+        accordionItem.innerHTML = HTMLText;
+
+        // Füge das neue Accordion-Item zum Accordion hinzu
+        RatingAccordion.appendChild(accordionItem);
     });
 }

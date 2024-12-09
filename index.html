@@ -144,7 +144,7 @@
         </div>
         <div class="item">
             <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalFAQ"
-                style="--background-image: url('Bilder/png/BX3A9256.png')">FAQ</button>
+                style="--background-image: url('Bilder/png/BX3A9256.png')">FAQ!</button>
         </div>
         <div class="item">
             <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalUmfrage"
@@ -180,8 +180,22 @@
             </div>
             </p>
             <p>
-                <textarea name="Rating-Textarea" id="" style="width: 100%; height: auto;"></textarea>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control Rating-Texttitle" id="floatingInput"
+                    placeholder="name@example.com">
+                <label for="floatingInput" style="color: #084D0F;">Titel</label>
+            </div>
             </p>
+            <p>
+                <textarea name="Rating-Textarea" id="Rating-Textarea" style="width: 100%; height: auto;"></textarea>
+            </p>
+            <p>
+                <button type="button" class="btn btn-success Rating-Send">Senden</button>
+            </p>
+        </div>
+        <div class="item cell-2">
+            <div class="accordion Rating-Accordion" id="Rating-Accordion">
+            </div>
         </div>
     </div>
 
