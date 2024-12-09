@@ -3,6 +3,8 @@ const dropArea = document.getElementById('drop-area');
 const dropText = document.getElementById('drop-text');
 const fileInput = document.getElementById('fileInput');
 const preview = document.getElementById('preview');
+var RatingTextarea = document.getElementById('Rating-Textarea');
+var RatingTexttitle = document.getElementById('floatingInput');
 
 var selectedRating = 0;
 var selectedImage = "";
@@ -120,8 +122,6 @@ function updateStars(rating) {
 
 
 function addBewertung() {
-    var RatingTextarea = document.getElementById('Rating-Textarea');
-    var RatingTexttitle = document.getElementById('floatingInput');
 
     var neuesBewertung = {
         id: 4,
@@ -134,6 +134,12 @@ function addBewertung() {
     removeAllAccordionItems();
     Bewertungen.push(neuesBewertung);
     generateAccordion();
+    preview.src = '';
+    preview.style.display = 'none';
+    dropArea.style.display = 'block';
+    dropText.innerHTML = `Ziehe dein Bild hier her oder <span class="browse - link">Durchsuchen</span>`;
+    RatingTextarea.value = "";
+    RatingTexttitle.value = "";
 }
 
 function removeAllAccordionItems() {
