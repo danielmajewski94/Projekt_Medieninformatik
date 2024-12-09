@@ -4,6 +4,9 @@ const dropText = document.getElementById('drop-text');
 const fileInput = document.getElementById('fileInput');
 const preview = document.getElementById('preview');
 
+var selectedRating = 0;
+var selectedImage = "";
+
 var Bewertungen = [
     {
         id: 1,
@@ -75,7 +78,8 @@ function handleFiles(files) {
 function displayImage(file) {
     const reader = new FileReader();
     reader.onload = (event) => {
-        preview.src = event.target.result;
+        selectedImage = event.target.result
+        preview.src = selectedImage;
         preview.style.display = 'block';
         dropArea.style.display = 'none';
     };
@@ -90,56 +94,75 @@ let currentRating = 0;
 // Hover-Effekt
 stars.forEach((star, index) => {
     star.addEventListener('mouseover', () => {
-        // Färbt alle Sterne bis zum aktuellen Stern gold
         updateStars(index + 1);
     });
 
     star.addEventListener('mouseout', () => {
-        // Wenn kein Rating ausgewählt, zurücksetzen
         updateStars(currentRating);
     });
 
     star.addEventListener('click', () => {
-        // Setzt die Bewertung und zeigt die Sterne entsprechend an
         currentRating = index + 1;
+        selectedRating = currentRating;
         updateStars(currentRating);
     });
 });
 
-// Funktion, um Sterne je nach Bewertung zu färben
 function updateStars(rating) {
     stars.forEach((star, index) => {
         if (index < rating) {
-            star.classList.add('selected'); // Färbt den Stern gold
+            star.classList.add('selected');
         } else {
-            star.classList.remove('selected'); // Entfernt die goldene Farbe
+            star.classList.remove('selected');
         }
+    });
+}
+
+
+function addBewertung() {
+    var RatingTextarea = document.getElementById('Rating-Textarea');
+    var RatingTexttitle = document.getElementById('floatingInput');
+
+    var neuesBewertung = {
+        id: 4,
+        Bild: selectedImage,
+        Sterne: selectedRating,
+        Titel: RatingTexttitle.value,
+        Bewertung: RatingTextarea.value
+    };
+
+    removeAllAccordionItems();
+    Bewertungen.push(neuesBewertung);
+    generateAccordion();
+}
+
+function removeAllAccordionItems() {
+    var items = document.querySelectorAll('.accordion-item');
+
+    items.forEach(function (item) {
+        item.remove();
     });
 }
 
 window.onload = function () {
     generateAccordion();
 };
+
 function generateAccordion() {
-    // Referenz auf das Akkordeon-Element
     var RatingAccordion = document.getElementById('Rating-Accordion');
 
-    // Iteriere durch die Bewertungen und erstelle für jede ein Accordion-Item
     Bewertungen.forEach(function (bewertung, index) {
-        // Erstelle ein neues Accordion-Item
         var accordionItem = document.createElement('div');
         accordionItem.classList.add('accordion-item');
 
         var HTMLText = ``;
 
-        // Setze den HTML-Inhalt für das Accordion-Item
         HTMLText = `
             <h2 class="accordion-header" id="rating-heading-${bewertung.id}-${index}">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
                         data-bs-target="#rating-collapse-${bewertung.id}-${index}" aria-expanded="false" aria-controls="rating-collapse-${bewertung.id}-${index}"><div class="rating-acc-header">
         `;
 
-        // Füge die Sterne hinzu
         for (i = 0; i < 5; i++) {
             if (i < bewertung.Sterne) {
                 HTMLText = HTMLText + `<span style="color: gold">&#9733;</span>`;
@@ -161,8 +184,6 @@ function generateAccordion() {
             </div>`;
 
         accordionItem.innerHTML = HTMLText;
-
-        // Füge das neue Accordion-Item zum Accordion hinzu
         RatingAccordion.appendChild(accordionItem);
     });
 }
