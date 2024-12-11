@@ -12,3 +12,9 @@
     gap: 20px;
     vertical-align: top;
 }
+
+@media screen and (max-width: 880px) {
+    .content_style {
+        display: grid;
+    }
+}

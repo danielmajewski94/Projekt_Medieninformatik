@@ -27,9 +27,9 @@ var Bewertungen = [
     {
         id: 2,
         Bild: "Bilder/BX3A4429.png",
-        Sterne: 1,
-        Titel: "Kacke!",
-        Bewertung: "Einfach scheiß Bilder"
+        Sterne: 4,
+        Titel: "Supi!",
+        Bewertung: "Einfach supi Bilder"
     }
 ];
 
