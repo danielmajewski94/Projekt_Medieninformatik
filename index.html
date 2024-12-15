@@ -27,7 +27,7 @@
     <script type="text/javascript">
         (function () {
             emailjs.init({
-                publicKey: 'UseDaF-fV-OWzpbW3' // Dein öffentlicher API-Schlüssel hier
+                publicKey: 'UseDaF-fV-OWzpbW3'
             });
         })();
     </script>
@@ -35,7 +35,6 @@
 
 <body>
     <div class="style_layout_navbar">
-        <!-- Header Image (Bild über die gesamte Breite) -->
         <div class="header-image">
             <img src="Bilder/png/BX3A9169a.png" alt="Header Bild" class="img-fluid">
         </div>
@@ -81,18 +80,6 @@
             </div>
         </nav>
     </div>
-    <form id="contactForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Nachricht:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="button" onclick="sendEmail()">SENDEN</button>
-    </form>
 
 
 
@@ -287,25 +274,26 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">E-Mail</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
-                            placeholder="name@example.com">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Betreff</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Betreff">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    </p>
+                    <form id="contactForm">
+                        <p>
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputMail" class="form-label">E-Mail</label>
+                            <input type="email" class="form-control" id="inputMail" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputMailtext" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="inputMailtext" rows="3"></textarea>
+                        </div>
+                        </p>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i>
+                    <button type="button" class="btn btn-primary" onclick="sendEmail()">
+                        SENDEN
                     </button>
                 </div>
             </div>
@@ -643,6 +631,27 @@
                     </div>
 
 
+                    <div id="q6-ort" class="ort-container question quest">
+                        <p>Wo soll der Termin stattfinden?</p>
+
+                        <div>
+                            <input type="radio" id="BeimFotograf" name="ort" value="BeimFotograf">
+                            <label for="BeimFotograf">Bei mir Vorort? (Ich werde Ihnen die Adresse zukommen
+                                lassen)</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="BeimSonstige" name="ort" value="BeimSonstige">
+                            <label for="BeimSonstige">An einem anderen Ort? Dann gib mir die Adresse:</label>
+                        </div>
+
+                        <div>
+                            <textarea name="message" rows="5" cols="30"></textarea>
+                        </div>
+                    </div>
+
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="nextStep" onclick="nextStep()">Weiter</button>
@@ -751,9 +760,9 @@
     <footer class="footer">
         <p>© 2024 Mein Unternehmen</p>
         <p>Impressum:
-            Daniel Majewski
-            Am Madenbach 19
-            97708 Bad Bocklet
+            Daniel Majewski,
+            Am Madenbach 19,
+            97708 Bad Bocklet,
             E-Mail: daniel.majewski94@web.de</p>
     </footer>
 
@@ -765,17 +774,20 @@
     </script>
 
     <script>
-        function sendEmail(event) {
-            if (event) event.preventDefault(); // Verhindert das Standard-Formular-Submit-Verhalten
+        var inputName = document.getElementById('inputName');
+        var inputMail = document.getElementById('inputMail');
+        var inputMailtext = document.getElementById('inputMailtext');
 
-            // Formulardaten sammeln
+        function sendEmail(event) {
+            if (event) event.preventDefault();
+
             const params = {
-                from_name: 'Daniel',              // Benutzername
-                from_email: 'daniel.majewski94@web.de', // Absender-E-Mail
-                message: 'Hallo'                   // Nachrichtentext
+                to_name: 'Daniel',
+                from_name: inputName.value,
+                from_email: inputMail.value,
+                message: inputMailtext.value
             };
 
-            // EmailJS API-Aufruf
             emailjs.send('service_vcbxxq7', 'template_yc7w0tg', params)
                 .then(response => {
                     alert('E-Mail erfolgreich gesendet!');

@@ -19,7 +19,6 @@ input[type="checkbox"] {
     height: 20px;
     accent-color: green;
     vertical-align: sub;
-    /* Ändert die Farbe (modernere Browser unterstützen dies) */
 }
 
 input[type="radio"] {
@@ -37,6 +36,13 @@ input[type="radio"] {
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.ort-container div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 
