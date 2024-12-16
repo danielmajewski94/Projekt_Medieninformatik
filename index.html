@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="style_layout.css">
     <link rel="stylesheet" href="style_kundenbewertung.css">
     <script src="script_umfrage.js" async></script>
-    <script src="script_calendar.js" async></script>
     <script src="script_vorstellung.js" async></script>
     <script src="script_kundenbewertung.js" async></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -633,28 +632,48 @@
 
                     <div id="q6-ort" class="ort-container question quest">
                         <p>Wo soll der Termin stattfinden?</p>
-
                         <div>
-                            <input type="radio" id="BeimFotograf" name="ort" value="BeimFotograf">
-                            <label for="BeimFotograf">Bei mir Vorort? (Ich werde Ihnen die Adresse zukommen
+                            <input type="radio" id="BeimFotograf" name="ort" value="BeimFotograf" checked>
+                            <label id="rBumfrageBeimFotograf" for="BeimFotograf">Bei mir Vorort? (Ich werde Ihnen
+                                die
+                                Adresse zukommen
                                 lassen)</label>
                         </div>
 
                         <div>
                             <input type="radio" id="BeimSonstige" name="ort" value="BeimSonstige">
-                            <label for="BeimSonstige">An einem anderen Ort? Dann gib mir die Adresse:</label>
+                            <label id="rBumfrageBeiSonstige" for="BeimSonstige">An einem anderen Ort? Dann gib mir
+                                die
+                                Adresse:</label>
                         </div>
 
                         <div>
-                            <textarea name="message" rows="5" cols="30"></textarea>
+                            <textarea id="umfragSonstigeText" name="message" rows="5" cols="30"></textarea>
                         </div>
+                    </div>
+
+
+                    <div id="q7-daten" class="ort-container question quest">
+                        <form id="contactFormDaten">
+                            <p>Bitte gib mir deine Kontaktdaten, damit ich dir antworten kann.</p>
+                            <p>
+                            <div class="mb-3">
+                                <label for="inputName" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="inputDatenName" placeholder="Name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="inputMail" class="form-label">E-Mail</label>
+                                <input type="email" class="form-control" id="inputDatenMail"
+                                    placeholder="name@example.com">
+                            </div>
+                        </form>
                     </div>
 
 
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="nextStep" onclick="nextStep()">Weiter</button>
+                    <button type="button" id="buttonUmfrageWeiter" class="nextStep" onclick="nextStep()">Weiter</button>
                 </div>
             </div>
         </div>
@@ -791,10 +810,8 @@
             emailjs.send('service_vcbxxq7', 'template_yc7w0tg', params)
                 .then(response => {
                     alert('E-Mail erfolgreich gesendet!');
-                    console.log('SUCCESS!', response.status, response.text);
                 }, error => {
                     alert('Fehler beim Senden der E-Mail.');
-                    console.error('FAILED...', error);
                 });
         }
     </script>
