@@ -31,6 +31,10 @@
     align-items: center;
 }
 
+.cell-3 {
+    grid-row: span 2;
+}
+
 /* Header Image */
 .header-image {
     width: 100%;

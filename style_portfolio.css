@@ -1,0 +1,24 @@
+.ptf_bild {
+    width: 100%;
+    height: auto;
+    transition: all 0.9s ease;
+    cursor: pointer;
+}
+
+.ptf_bild:hover {
+    transform: scale(1.2);
+}
+
+.ptf_image {
+    overflow: hidden;
+}
+
+.pft-imagecontainer {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h1 {
+    font-size: 50pt;
+    color: #084D0F;
+}
