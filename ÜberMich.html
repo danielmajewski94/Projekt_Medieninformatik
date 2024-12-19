@@ -19,10 +19,19 @@
     <link rel="stylesheet" href="style_vorstellung.css">
     <link rel="stylesheet" href="style_layout.css">
     <link rel="stylesheet" href="style_kundenbewertung.css">
+    <link rel="stylesheet" href="style_uebermich.css">
     <link rel="stylesheet" href="style_portfolio.css">
     <script src="script_umfrage.js" async></script>
     <script src="script_vorstellung.js" async></script>
     <script src="script_kundenbewertung.js" async></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: 'UseDaF-fV-OWzpbW3'
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -77,62 +86,53 @@
         </nav>
     </div>
 
-
     <div class="grid-container pft-imagecontainer">
         <div class="item cell-2">
-            <h1>Portfolio<br>Hochzeit und Events</h1>
+            <p style="text-align: left;">
+            <h1>Hallo</h1>
+            </p>
         </div>
-        <div class="item cell-3">
-            <div class="ptf_image">
-                <img src="Bilder/BX3A4429.png" alt="" class="ptf_bild">
-            </div>
+        <div class="item cell-2">
+            <p class="uem_Text">Ich bin ihr Fotograf, für Ihre schönsten Momente. Möchtest du mich für dein Event
+                kennenlernen? Dann schreib mir gerne oder schaue dir meine umfrage auf der Startseite an. Dort kannst du
+                beqem auch direkt einen Termin bei mir buchen.</p>
         </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/BX3A9169a.jpg" alt="" class="ptf_bild">
-            </div>
+        <div class="item" style="text-align: right;"><img src="Bilder/DSC_5161Lr.jpg" class="uem_bild"></div>
+        <div class="item" style="text-align: left;">
+            <h1>Daniel Majewski</h1>
         </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/BX3A9256.jpg" alt="" class="ptf_bild">
-            </div>
+        <div class="item uem_contactdata">
+            <p>
+            <p>Tel.: 015xxxxxxxxxx
+            <p>E-Mail: daniel.majewski@iu-study.org</p>
+            <p>Web: www.majewski-fotografie.de</p>
+            </p>
         </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/BX3A9305.jpg" alt="" class="ptf_bild">
-            </div>
-        </div>
-        <div class="item cell-3">
-            <div class="ptf_image">
-                <img src="Bilder/BX3A5248.png" alt="" class="ptf_bild">
-            </div>
-        </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/IMG_4664.jpg" alt="" class="ptf_bild">
-            </div>
-        </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/IMG_8634.jpg" alt="" class="ptf_bild">
-            </div>
-        </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/IMG_9303b.jpg" alt="" class="ptf_bild">
-            </div>
-        </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/IMG_9496.jpg" alt="" class="ptf_bild">
-            </div>
-        </div>
-        <div class="item">
-            <div class="ptf_image">
-                <img src="Bilder/BX3A4874.png" alt="" class="ptf_bild">
-            </div>
+        <div class="item cell-2">
+            <form id="contactForm" class="uem_ContactForm">
+                <p>
+                <div class="mb-3">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <label for="inputMail" class="form-label">E-Mail</label>
+                    <input type="email" class="form-control" id="inputMail" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="inputMailtext" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="inputMailtext" rows="3"></textarea>
+                </div>
+                </p>
+
+                <button type="button" class="btn btn-primary" onclick="sendEmail()">
+                    SENDEN
+                </button>
+            </form>
         </div>
     </div>
+
+
 
     <footer class="footer">
         <p>© 2024 Mein Unternehmen</p>
@@ -142,6 +142,31 @@
             97708 Bad Bocklet,
             E-Mail: daniel.majewski94@web.de</p>
     </footer>
+
+
+    <script>
+        var inputName = document.getElementById('inputName');
+        var inputMail = document.getElementById('inputMail');
+        var inputMailtext = document.getElementById('inputMailtext');
+
+        function sendEmail(event) {
+            if (event) event.preventDefault();
+
+            const params = {
+                to_name: 'Daniel',
+                from_name: inputName.value,
+                from_email: inputMail.value,
+                message: inputMailtext.value
+            };
+
+            emailjs.send('service_vcbxxq7', 'template_yc7w0tg', params)
+                .then(response => {
+                    alert('E-Mail erfolgreich gesendet!');
+                }, error => {
+                    alert('Fehler beim Senden der E-Mail.');
+                });
+        }
+    </script>
 </body>
 
 </html>
