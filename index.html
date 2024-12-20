@@ -59,25 +59,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html" style="font-size: 16pt;">Kontakt</a>
                         </li>
-                        <!--<li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" style="font-size: 16pt;">
-                                Portfolio
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#" style="font-size: 16pt;">Action</a></li>
-                                <li><a class="dropdown-item" href="#" style="font-size: 16pt;">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" style="font-size: 16pt;">Something else here</a>
-                                </li>
-                            </ul>
-                        </li>-->
-                        <li class="nav-item">
-                            <a class="nav-link" aria-disabled="true" style="font-size: 16pt;"
-                                href="Dokumente/Datenschutz.pdf" target="_blank">Datenschutz</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -288,7 +269,7 @@
                             <input type="email" class="form-control" id="inputMail" placeholder="name@example.com">
                         </div>
                         <div class="mb-3">
-                            <label for="inputMailtext" class="form-label">Example textarea</label>
+                            <label for="inputMailtext" class="form-label">E-Mail-Text</label>
                             <textarea class="form-control" id="inputMailtext" rows="3"></textarea>
                         </div>
                         </p>
@@ -781,12 +762,20 @@
 
 
     <footer class="footer">
-        <p>© 2024 Mein Unternehmen</p>
-        <p>Impressum:
-            Daniel Majewski,
-            Am Madenbach 19,
-            97708 Bad Bocklet,
-            E-Mail: daniel.majewski94@web.de</p>
+        <div class="grid-container-footer">
+            <div class="item ss_copyright" style="padding-bottom: 0px;">
+                <p>© 2024 Majewski Fotografie</p>
+            </div>
+            <div class="item ss_impressum" style="padding-bottom: 0px;">
+                <p><strong>Impressum:</strong><br>
+                    Daniel Majewski<br>
+                    Am Madenbach 19, 97708 Bad Bocklet<br>
+                    E-Mail: daniel.majewski94@web.de</p>
+            </div>
+            <div class="item ss_buttonausrichtung" style="padding-bottom: 0px;">
+                <button id="btn_datenschutz" href="Dokumente/Datenschutz.pdf" target="_blank">Datenschutz</button>
+            </div>
+        </div>
     </footer>
 
     <script>

@@ -7,10 +7,18 @@
     /*grid-auto-rows: minmax(50pt, 100pt);*/
 }
 
+.grid-container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 0px;
+    padding: 0px;
+    /*grid-auto-rows: minmax(50pt, 100pt);*/
+}
+
 .item {
-    background-color: #ffffff;
     padding: 20px;
-    border: 1px solid #f1f1f1;
+    border: 0px solid #f1f1f1;
     text-align: center;
     width: auto;
     max-width: 100%;

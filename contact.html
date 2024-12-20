@@ -61,52 +61,27 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html" style="font-size: 16pt;">Kontakt</a>
                         </li>
-                        <!--<li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false" style="font-size: 16pt;">
-                                Portfolio
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#" style="font-size: 16pt;">Action</a></li>
-                                <li><a class="dropdown-item" href="#" style="font-size: 16pt;">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#" style="font-size: 16pt;">Something else here</a>
-                                </li>
-                            </ul>
-                        </li>-->
-                        <li class="nav-item">
-                            <a class="nav-link" aria-disabled="true" style="font-size: 16pt;"
-                                href="Dokumente/Datenschutz.pdf" target="_blank">Datenschutz</a>
-                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 
-    <div class="grid-container pft-imagecontainer">
+    <div class="grid-container">
         <div class="item cell-2">
             <p style="text-align: left;">
-            <h1>Hallo</h1>
+            <h1>Kontakt</h1>
             </p>
         </div>
-        <div class="item cell-2">
-            <p class="uem_Text">Ich bin ihr Fotograf, für Ihre schönsten Momente. Möchtest du mich für dein Event
-                kennenlernen? Dann schreib mir gerne oder schaue dir meine umfrage auf der Startseite an. Dort kannst du
-                beqem auch direkt einen Termin bei mir buchen.</p>
-        </div>
-        <div class="item" style="text-align: right;"><img src="Bilder/DSC_5161Lr.jpg" class="uem_bild"></div>
-        <div class="item" style="text-align: left;">
-            <h1>Daniel Majewski</h1>
-        </div>
-        <div class="item uem_contactdata">
-            <p>
-            <p>Tel.: 015xxxxxxxxxx
-            <p>E-Mail: daniel.majewski@iu-study.org</p>
-            <p>Web: www.majewski-fotografie.de</p>
-            </p>
+        <div class="item cell-2 con_kontaktdaten">
+            <div class="con_daten">
+                <h1>Daniel Majewski</h1>
+                <p>
+                <p>Tel.: 015xxxxxxxxxx
+                <p>E-Mail: daniel.majewski@iu-study.org</p>
+                <p>Web: www.majewski-fotografie.de</p>
+                </p>
+            </div>
         </div>
         <div class="item cell-2">
             <form id="contactForm" class="uem_ContactForm">
@@ -120,7 +95,7 @@
                     <input type="email" class="form-control" id="inputMail" placeholder="name@example.com">
                 </div>
                 <div class="mb-3">
-                    <label for="inputMailtext" class="form-label">Example textarea</label>
+                    <label for="inputMailtext" class="form-label">Nachricht</label>
                     <textarea class="form-control" id="inputMailtext" rows="3"></textarea>
                 </div>
                 </p>
@@ -134,13 +109,23 @@
 
 
 
+
+
     <footer class="footer">
-        <p>© 2024 Mein Unternehmen</p>
-        <p>Impressum:
-            Daniel Majewski,
-            Am Madenbach 19,
-            97708 Bad Bocklet,
-            E-Mail: daniel.majewski94@web.de</p>
+        <div class="grid-container-footer">
+            <div class="item ss_copyright" style="padding-bottom: 0px;">
+                <p>© 2024 Majewski Fotografie</p>
+            </div>
+            <div class="item ss_impressum" style="padding-bottom: 0px;">
+                <p><strong>Impressum:</strong><br>
+                    Daniel Majewski<br>
+                    Am Madenbach 19, 97708 Bad Bocklet<br>
+                    E-Mail: daniel.majewski94@web.de</p>
+            </div>
+            <div class="item ss_buttonausrichtung" style="padding-bottom: 0px;">
+                <button id="btn_datenschutz" href="Dokumente/Datenschutz.pdf" target="_blank">Datenschutz</button>
+            </div>
+        </div>
     </footer>
 
 

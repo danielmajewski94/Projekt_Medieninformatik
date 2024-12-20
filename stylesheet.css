@@ -75,7 +75,7 @@
 .footer {
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 0px 0;
     margin-top: 20px;
     margin-bottom: 20px;
     height: auto;
@@ -97,6 +97,47 @@
 
 .txt1 {
     font-size: 18pt;
+}
+
+#btn_datenschutz {
+    background-color: transparent;
+    color: #ffffff;
+    border: 0px solid #ffffff;
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 10pt;
+    margin-bottom: 5px;
+}
+
+#btn_datenschutz:hover {
+    background-color: #ffffff;
+    color: #084D0F;
+}
+
+.ss_buttonausrichtung {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.ss_copyright {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 7pt;
+}
+
+.ss_impressum {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    font-size: 10pt;
 }
 
 @media screen and (max-width: 768px) {

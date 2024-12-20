@@ -16,9 +16,26 @@
 .uem_contactdata {
     grid-column: span 1;
     text-align: left;
-    font-size: 18pt;
+    font-size: 1vw;
 }
 
+.con_kontaktdaten {
+    display: flex;
+    text-align: center;
+}
+
+.con_image {
+    max-width: 100%;
+    height: auto;
+    width: 50%;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.con_daten {
+    text-align: left;
+    flex: 1;
+}
 
 @media screen and (max-width: 1330px) {
 
