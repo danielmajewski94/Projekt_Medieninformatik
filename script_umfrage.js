@@ -104,8 +104,25 @@ function nextStep() {
     }
 }
 
-document.getElementById("ModalUmfrage").addEventListener("hidden.bs.modal", function () {
-    currentStep = 0;
+
+document.addEventListener('shown.bs.modal', function (event) {
+    var modal = bootstrap.Modal.getInstance(event.target);
+    var closeButton = document.getElementById('btn-close-umfrage');
+
+    if (closeButton) {
+        closeButton.addEventListener('click', function () {
+            modal.hide();
+            document.getElementById('question1').style.display = 'block';
+            document.getElementById('q2-hochzeit').style.display = 'none';
+            document.getElementById('q2-familie').style.display = 'none';
+            document.getElementById('q3-zeit').style.display = 'none';
+            document.getElementById('q4-budget').style.display = 'none';
+            document.getElementById('q5-calendar').style.display = 'none';
+            document.getElementById('q6-ort').style.display = 'none';
+            document.getElementById('q7-daten').style.display = 'none';
+            currentStep = 1;
+        });
+    }
 });
 
 function sendEmailTerminvergabe(event) {
