@@ -1,6 +1,8 @@
 let step = 1;
 
+// Funktion zum Wechseln der Schritte
 function StepNext() {
+    console.log(step);
     if (step === 1) {
         document.getElementById('step1_gruss').style.display = 'none';
         document.getElementById('step2_hardware').style.display = 'block';
@@ -22,3 +24,20 @@ function StepNext() {
         step = 0;
     }
 }
+
+
+document.addEventListener('shown.bs.modal', function (event) {
+    var modal = bootstrap.Modal.getInstance(event.target);
+    var closeButton = document.getElementById('btn-close-vostellung');
+
+    if (closeButton) {
+        closeButton.addEventListener('click', function () {
+            modal.hide();
+            document.getElementById('step1_gruss').style.display = 'block';
+            document.getElementById('step3_style').style.display = 'none';
+            document.getElementById('step4_video').style.display = 'none';
+            document.getElementById('step2_hardware').style.display = 'none';
+            step = 1;
+        });
+    }
+});
