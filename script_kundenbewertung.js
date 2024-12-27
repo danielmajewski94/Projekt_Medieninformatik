@@ -10,27 +10,27 @@ var selectedRating = 0;
 var selectedImage = "";
 
 var Bewertungen = [
-    {
-        id: 1,
-        Bild: "Bilder/IMG_9496.jpg",
-        Sterne: 3,
-        Titel: "Gut!",
-        Bewertung: "Sehr solide und toll"
-    },
-    {
-        id: 3,
-        Bild: "Bilder/IMG_4001.jpg",
-        Sterne: 5,
-        Titel: "Perfekt!",
-        Bewertung: "Einfach super perfekt."
-    },
-    {
-        id: 2,
-        Bild: "Bilder/BX3A4429.png",
-        Sterne: 4,
-        Titel: "Supi!",
-        Bewertung: "Einfach supi Bilder"
-    }
+    /*    {
+            id: 1,
+            Bild: "Bilder/IMG_9496.jpg",
+            Sterne: 3,
+            Titel: "Gut!",
+            Bewertung: "Sehr solide und toll"
+        },
+        {
+            id: 3,
+            Bild: "Bilder/IMG_4001.jpg",
+            Sterne: 5,
+            Titel: "Perfekt!",
+            Bewertung: "Einfach super perfekt."
+        },
+        {
+            id: 2,
+            Bild: "Bilder/BX3A4429.png",
+            Sterne: 4,
+            Titel: "Supi!",
+            Bewertung: "Einfach supi Bilder"
+        }*/
 ];
 
 // Simulate click on the hidden file input when clicking the "Durchsuchen" link

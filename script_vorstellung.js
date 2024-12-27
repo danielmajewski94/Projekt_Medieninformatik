@@ -18,5 +18,7 @@ function StepNext() {
         step++;
         const button = document.getElementById('button_gruss');
         button.style.display = 'none';
+    } else {
+        step = 0;
     }
 }

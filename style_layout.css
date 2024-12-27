@@ -174,4 +174,12 @@
     .empty-item {
         display: none;
     }
+
+    .grid-container-footer {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 0px;
+        padding: 0px;
+        /*grid-auto-rows: minmax(50pt, 100pt);*/
+    }
 }

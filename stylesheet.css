@@ -156,4 +156,14 @@
     .Modal-button {
         font-size: 5vw;
     }
+
+    .ss_buttonausrichtung {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ss_copyright {
+        justify-content: center;
+        text-align: center;
+    }
 }
