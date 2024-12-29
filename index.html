@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="style_kundenbewertung.css">
     <script src="script_umfrage.js" async></script>
     <script src="script_vorstellung.js" async></script>
-    <script src="script_kundenbewertung.js" async></script>
+    <!--<script src="script_kundenbewertung.js" async></script>-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -81,50 +81,8 @@
 
 
     <div class="grid-container">
-        <div class="item">
-            <div class="card_contact">
-                <div class="card_contact_header">
-                    <img src="Bilder/DSC_5161Lr.jpg">
-                    <div>
-                        <h3>Daniel Majewski</h3>
-                    </div>
-                    <div>
-                        <p>Fotograf</p>
-                    </div>
-                </div>
-                <div class="card_contact_body">
-                    <ul>
-                        <li>
-                            <h4>015738312479</h4>
-                            <i class="fas fa-mobile-alt"></i>
-                        </li>
-                        <li data-bs-toggle="modal" data-bs-target="#ModalKontakt">
-                            <h4>daniel.majewski94@web.de</h4>
-                            <i class="fas fa-envelope"></i>
-                        </li>
-                        <li>
-                            <h4>www.majewski-fotografie.de</h4>
-                            <i class="fas fa-globe-americas"></i>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card_contact_footer">
-                    <ul>
-                        <li>
-                            <i class="fab fa-facebook-f"></i>
-                        </li>
-                        <li>
-                            <i class="fab fa-twitter"></i>
-                        </li>
-                        <li>
-                            <i class="fab fa-instagram"></i>
-                        </li>
-                        <li>
-                            <i class="fab fa-linkedin-in"></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="item ss_contact">
+            <img src="Bilder/DSC_5161Lr.jpg" class="bild" style="width: 50%;">
         </div>
         <div class="item cell-1">
             <p class="u1">Der Fotograf für deine schönsten Momente!</p>
@@ -133,6 +91,7 @@
                 Inspiration.<br>Meine Fotografie ist eine Suche nach der Schönheit im Alltäglichen, eine Reise durch das
                 Unerwartete.<br>Jedes Bild ist ein Kunstwerk, eingefangen in dem kostbaren Moment, der für die Ewigkeit
                 bewahrt wird.</p>
+            <button id="ss_btn_contact" data-bs-toggle="modal" data-bs-target="#ModalKontakt">Schreib mir!</button>
         </div>
         <div class="item">
             <div class="ss_image">
@@ -201,7 +160,7 @@
                 </div>
             </div>
         </div>
-        <div class="item">
+        <!--        <div class="item">
             <div id="drop-area" class="drop-area">
                 <p id="drop-text">Ziehe dein Bild hier her oder <span class="browse-link">Durchsuchen</span></p>
                 <input type="file" id="fileInput" multiple hidden>
@@ -241,7 +200,7 @@
         <div class="item cell-2">
             <div class="accordion Rating-Accordion" id="Rating-Accordion">
             </div>
-        </div>
+        </div>-->
     </div>
 
 
