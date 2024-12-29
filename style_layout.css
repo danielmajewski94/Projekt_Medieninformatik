@@ -17,7 +17,7 @@
 }
 
 .item {
-    padding: 0px;
+    padding: 10px;
     border: 0px solid #f1f1f1;
     text-align: center;
     width: auto;
@@ -63,6 +63,9 @@
 
 /* Navbar */
 .style_layout_navbar {
+    font-family: "Pragati Narrow", serif;
+    font-weight: 400;
+    font-style: normal;
     z-index: 1;
     color: white;
     text-align: center;

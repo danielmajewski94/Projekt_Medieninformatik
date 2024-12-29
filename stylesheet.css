@@ -9,6 +9,7 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 48pt;
+    letter-spacing: 5px;
 }
 
 
@@ -69,17 +70,16 @@ h1 {
 
 .Modal-button {
     width: 100%;
-    max-width: 400px;
+    max-width: 1000px;
     height: auto;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 2 / 2;
     border: 0px solid;
-    border-color: rgb(8, 77, 15);
     background-image: var(--background-image);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     color: white;
-    font-size: 1.5vw;
+    font-size: 2.5vw;
     font-weight: bold;
     cursor: pointer;
     opacity: 0.8;
