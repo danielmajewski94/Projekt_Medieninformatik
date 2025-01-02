@@ -132,9 +132,9 @@ h1 {
     margin-bottom: 5px;
 }
 
-#ss_btn_contact {
+.ss_btn_contact {
     width: 180px;
-    height: 70px;
+    height: 55px;
     background-color: transparent;
     color: #000000;
     border: 1px solid #000000;
@@ -144,7 +144,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-#ss_btn_contact:hover {
+.ss_btn_contact:hover {
     background-color: #084D0F;
     color: white;
     border: 1px solid #084D0F;
