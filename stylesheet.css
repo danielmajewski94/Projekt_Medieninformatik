@@ -10,6 +10,7 @@ h1 {
     font-style: normal;
     font-size: 48pt;
     letter-spacing: 5px;
+    color: #084D0F;
 }
 
 
@@ -90,6 +91,26 @@ h1 {
 .Modal-button:hover {
     color: #084D0F;
     transform: scale(1.2);
+}
+
+.hidden-text {
+    opacity: 0;
+    font-size: 16pt;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.Modal-button:hover .hidden-text {
+    opacity: 1;
+}
+
+.Modal-button:hover .ss_buttontext {
+    background-color: #ffffff97;
+}
+
+.ss_buttontext {
+    background-color: #ffffff46;
+    margin-left: 10pt;
+    margin-right: 10pt;
 }
 
 .footer {
