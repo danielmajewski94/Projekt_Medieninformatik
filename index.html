@@ -728,12 +728,14 @@
         </div>
     </footer>
 
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Diese Website verwendet Cookies, um Ihnen eine bessere Nutzererfahrung zu bieten. Durch die Nutzung dieser
-            Website stimmen Sie der Verwendung von Cookies zu. <a href="/datenschutz" target="_blank">Mehr erfahren</a>.
-        </p>
-        <button id="accept-cookies" class="cookie-button">Akzeptieren</button>
-        <button id="decline-cookies" class="cookie-button">Ablehnen</button>
+    <div id="cookie-modal" class="cookie-modal">
+        <div class="cookie-modal-content">
+            <p>Diese Website verwendet Cookies, um Ihnen eine bessere Nutzererfahrung zu bieten. Durch die Nutzung
+                dieser Website stimmen Sie der Verwendung von Cookies zu. <a href="/datenschutz" target="_blank">Mehr
+                    erfahren</a>.</p>
+            <button id="accept-cookies" class="cookie-button">Akzeptieren</button>
+            <button id="decline-cookies" class="cookie-button">Ablehnen</button>
+        </div>
     </div>
 
     <script>
@@ -763,22 +765,42 @@
         });
 
         document.addEventListener("DOMContentLoaded", function () {
+            // Überprüfen, ob der Nutzer die Cookies bereits akzeptiert oder abgelehnt hat
             if (!localStorage.getItem("cookies-accepted") && !localStorage.getItem("cookies-declined")) {
-                document.getElementById("cookie-banner").style.display = "block";
+                document.getElementById("cookie-modal").style.display = "block"; // Modal anzeigen
             }
 
+            // Event Listener für den "Akzeptieren"-Button
             document.getElementById("accept-cookies").addEventListener("click", function () {
+                // Speichern, dass der Nutzer die Cookies akzeptiert hat
                 localStorage.setItem("cookies-accepted", "true");
 
-                document.getElementById("cookie-banner").style.display = "none";
+                // Modal ausblenden
+                document.getElementById("cookie-modal").style.display = "none";
             });
 
+            // Event Listener für den "Ablehnen"-Button
             document.getElementById("decline-cookies").addEventListener("click", function () {
+                // Speichern, dass der Nutzer die Cookies abgelehnt hat
                 localStorage.setItem("cookies-declined", "true");
 
-                document.getElementById("cookie-banner").style.display = "none";
+                // Modal ausblenden
+                document.getElementById("cookie-modal").style.display = "none";
+            });
+
+            // Event Listener für das Schließen des Modals über das "X"-Symbol
+            document.getElementById("close-modal").addEventListener("click", function () {
+                document.getElementById("cookie-modal").style.display = "none";
+            });
+
+            // Schließen des Modals, wenn der Nutzer außerhalb des Modals klickt
+            window.addEventListener("click", function (event) {
+                if (event.target === document.getElementById("cookie-modal")) {
+                    document.getElementById("cookie-modal").style.display = "none";
+                }
             });
         });
+
     </script>
 
     <script>

@@ -209,17 +209,40 @@ h1 {
     align-items: center;
 }
 
-.cookie-banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    z-index: 9999;
+/* Das Modal (es ist standardmäßig ausgeblendet) */
+.cookie-modal {
     display: none;
+    /* Versteckt das Modal standardmäßig */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Transparenter Hintergrund */
+}
+
+/* Das Modal-Inhalt */
+.cookie-modal-content {
+    background-color: white;
+    padding: 20px;
+    margin: 15% auto;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+/* Das "Schließen"-Symbol */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .cookie-button {
@@ -228,6 +251,9 @@ h1 {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
 }
 
 .cookie-button:hover {
@@ -236,11 +262,13 @@ h1 {
 
 #decline-cookies {
     background-color: #f44336;
+    /* Rote Farbe für Ablehnen */
 }
 
 #decline-cookies:hover {
     background-color: #e53935;
 }
+
 
 @media screen and (max-width: 768px) {
 
