@@ -38,6 +38,15 @@ document.addEventListener('shown.bs.modal', function (event) {
             document.getElementById('step4_video').style.display = 'none';
             document.getElementById('step2_hardware').style.display = 'none';
             step = 1;
+            pauseVideo();
         });
     }
 });
+
+function pauseVideo() {
+    var video = document.getElementById('video_container');
+    if (video) {
+        video.pause(); // Pausiert das Video
+        video.currentTime = 0; // Setzt das Video auf den Startpunkt zurück
+    }
+}
