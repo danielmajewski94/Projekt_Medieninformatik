@@ -46,7 +46,7 @@ document.addEventListener('shown.bs.modal', function (event) {
 function pauseVideo() {
     var video = document.getElementById('video_container');
     if (video) {
-        video.pause(); // Pausiert das Video
-        video.currentTime = 0; // Setzt das Video auf den Startpunkt zurück
+        video.pause();
+        video.currentTime = 0;
     }
 }
