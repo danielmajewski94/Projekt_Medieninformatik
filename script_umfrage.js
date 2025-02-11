@@ -87,6 +87,8 @@ function nextStep() {
             answers.push({ question: "Was soll ich fotografieren?", answer: "Beim Fotograf" });
         } else if (selectedOption === 'BeimSonstige') {
             answers.push({ question: "Was soll ich fotografieren?", answer: document.getElementById('umfragSonstigeText').value });
+        } else if (selectedOption === 'BeimOnline') {
+            answers.push({ question: "Was soll ich fotografieren?", answer: "Online" });
         }
 
 
