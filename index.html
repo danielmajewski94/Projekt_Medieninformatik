@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="style_card.css">
@@ -32,6 +33,7 @@
     <link rel="stylesheet" href="style_vorstellung.css">
     <link rel="stylesheet" href="style_layout.css">
     <link rel="stylesheet" href="style_kundenbewertung.css">
+    <link rel="stylesheet" href="style_heroimage.css">
     <script src="script.js" async></script>
     <script src="script_umfrage.js" async></script>
     <script src="script_vorstellung.js" async></script>
@@ -44,41 +46,65 @@
             });
         })();
     </script>
+    <style>
+        .parallax-layer {
+            will-change: transform;
+        }
+
+        #menu {
+            transition: background-color 0.3s, opacity 0.3s;
+        }
+    </style>
     <link rel="icon" href="Bilder/iconcamera.png" type="image/png">
 </head>
 
 <body>
-    <div class="style_layout_navbar">
-        <div class="header-image">
-            <img src="Bilder/png/BX3A9169a.png" alt="Header Bild" class="img-fluid">
+    <div id="menu" class="menu">
+        <div class="style_layout_navbar">
+            <nav class="style_layout_nav navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 0;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#" style="font-size: 24pt;">Hochzeitfotograf</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html"
+                                    style="font-size: 16pt;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="portfolio.html" style="font-size: 16pt;">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" style="font-size: 16pt;">Kontakt</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <img id="hero-img" src="Bilder/BX3A9169a.jpg" alt="Hero Image" class="hero-image">
+            <div class="hero-overlay"></div>
         </div>
 
-        <!-- Navbar -->
-        <nav class="style_layout_nav navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 0;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" style="font-size: 24pt;">Hochzeitsfotograf</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html"
-                                style="font-size: 16pt;">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="portfolio.html" style="font-size: 16pt;">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html" style="font-size: 16pt;">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+        <div id="hero-text" class="hero-text">
+
+            <div class="hero-ueb">Hochzeitsfotograf</div>
+
+            <nav class="hero-menu">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+        </div>
+    </section>
 
 
 
@@ -803,6 +829,47 @@
                 });
         }
     </script>
+
+
+    <script>
+        const heroText = document.getElementById("hero-text");
+        const menu = document.getElementById("menu");
+        menu.classList.add("hidden");
+
+        let targetTextY = 0;
+        let currentTextY = 0;
+        const speed = 0.08;
+
+        const heroHeight = document.querySelector('.hero').offsetHeight;
+
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
+
+            // Text leicht nach oben scrollen
+            targetTextY = scrollY * 0.5;
+
+            // Menü nur anzeigen, wenn über Hero gescrollt
+            if (scrollY > heroHeight) {
+                menu.classList.remove("hidden"); // sichtbar
+                menu.classList.add("blue");      // blau
+            } else {
+                menu.classList.add("hidden");    // ausblenden
+                menu.classList.remove("blue");
+            }
+        });
+
+        function animate() {
+            if (heroText) {
+                currentTextY += (targetTextY - currentTextY) * speed;
+                heroText.style.transform = `translateY(${currentTextY}px)`;
+            }
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+    </script>
+
 
 </body>
 

@@ -1,0 +1,160 @@
+/* Menü */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: transparent;
+    color: #000;
+    padding: 0rem 0rem;
+    display: block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0);
+    transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+    opacity: 1;
+}
+
+.menu.hidden {
+    display: none;
+}
+
+.menu.blue {
+    color: white;
+}
+
+.menu-inner {
+    max-width: 96rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-text {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.menu-nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s;
+}
+
+.menu-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar-Links rechtsbündig */
+.navbar-nav.ms-auto {
+    margin-left: auto;
+    /* rechtsbündig */
+}
+
+.navbar-nav .nav-link {
+    color: inherit;
+    font-size: 16pt;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffd700;
+    /* optional */
+}
+
+/* Hero-Bereich */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Text */
+.hero-text {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Kleines Menü im Hero */
+.hero-menu {
+    margin-bottom: 1.5rem;
+}
+
+.hero-menu a {
+    margin: 0 0.5rem;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 600;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: 2rem;
+    color: #084D0F;
+}
+
+.hero-menu a:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.hero-ueb {
+    font-size: 8rem;
+    color: white;
+    /* Zeilenumbruch möglich */
+}
+
+.letter {
+    opacity: 0;
+    transform: translateY(20px);
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.letter.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Parallax Layer */
+.parallax-layer {
+    will-change: transform;
+}
+
+/* Menü beim Scrollen */
+#menu {
+    transition: background-color 0.3s, opacity 0.3s;
+}
