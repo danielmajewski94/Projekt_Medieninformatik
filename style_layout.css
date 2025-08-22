@@ -105,6 +105,18 @@
     border: 1px solid white;
 }
 
+.item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 @media screen and (max-width: 1330px) {
     .grid-container {
         display: grid;
