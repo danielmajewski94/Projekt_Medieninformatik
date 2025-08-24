@@ -37,6 +37,16 @@
     flex: 1;
 }
 
+#contactForm textarea {
+    width: 100%;
+    min-height: 120px;
+    /* Höhe der Textarea */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
 @media screen and (max-width: 1330px) {
 
     .pft-imagecontainer {

@@ -37,6 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0px solid #ff0000;
 }
 
 .cell-3 {
@@ -63,7 +64,7 @@
 
 /* Navbar */
 .style_layout_navbar {
-    font-family: "Pragati Narrow", serif;
+    font-family: 'Licorice', cursive;
     font-weight: 400;
     font-style: normal;
     z-index: 1;
@@ -94,7 +95,7 @@
 /* Optional: Text und Links mit Schatten versehen, um sie besser sichtbar zu machen */
 .style_layout_navbar .navbar-brand,
 .style_layout_navbar .nav-link {
-    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-toggler-icon {
@@ -103,12 +104,6 @@
 
 .navbar-toggler {
     border: 1px solid white;
-}
-
-.item {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .item.show {

@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="style_card.css">
@@ -38,6 +39,7 @@
     <script src="script.js" async></script>
     <script src="script_umfrage.js" async></script>
     <script src="script_vorstellung.js" async></script>
+    <script src="script_hero.js" async></script>
     <!--<script src="script_kundenbewertung.js" async></script>-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -64,7 +66,7 @@
         <div class="style_layout_navbar">
             <nav class="style_layout_nav navbar navbar-expand-lg bg-body-tertiary" style="margin-bottom: 0;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#" style="font-size: 24pt;">Hochzeitfotograf</a>
+                    <a class="navbar-brand" href="#" style="font-size: 30pt;">Hochzeitfotograf</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -830,63 +832,6 @@
                     alert('Fehler beim Senden der E-Mail.');
                 });
         }
-    </script>
-
-
-    <script>
-        const heroText = document.getElementById("hero-text");
-        const menu = document.getElementById("menu");
-        menu.classList.add("hidden");
-
-        let targetTextY = 0;
-        let currentTextY = 0;
-        const speed = 0.08;
-
-        const heroHeight = document.querySelector('.hero').offsetHeight;
-
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-
-            // Text leicht nach oben scrollen
-            targetTextY = scrollY * 0.5;
-
-            // Menü nur anzeigen, wenn über Hero gescrollt
-            if (scrollY > heroHeight) {
-                menu.classList.remove("hidden"); // sichtbar
-                menu.classList.add("blue");      // blau
-            } else {
-                menu.classList.add("hidden");    // ausblenden
-                menu.classList.remove("blue");
-            }
-        });
-
-        function animate() {
-            if (heroText) {
-                currentTextY += (targetTextY - currentTextY) * speed;
-                heroText.style.transform = `translateY(${currentTextY}px)`;
-            }
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const items = document.querySelectorAll('.item');
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show'); // einblenden
-                    } else {
-                        entry.target.classList.remove('show'); // ausblenden
-                    }
-                });
-            }, { threshold: 0.1 }); // 10% Sichtbarkeit triggern
-
-            items.forEach(item => observer.observe(item));
-        });
     </script>
 
 </body>

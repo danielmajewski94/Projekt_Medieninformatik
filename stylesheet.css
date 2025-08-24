@@ -2,15 +2,16 @@ body {
     font-family: "Pragati Narrow", serif;
     font-weight: 400;
     font-style: normal;
+    background: linear-gradient(135deg, #b5b5b5, #ffffff, #b5b5b5);
 }
 
 h1 {
-    font-family: "Pragati Narrow", serif;
+    font-family: 'Licorice', cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 48pt;
+    font-size: 60pt;
     letter-spacing: 5px;
-    color: #084D0F;
+    color: grey;
 }
 
 
