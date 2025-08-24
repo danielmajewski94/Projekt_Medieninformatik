@@ -126,7 +126,7 @@
     text-decoration: none;
     transition: all 0.2s;
     font-size: 2rem;
-    color: #084D0F;
+    color: rgb(67, 67, 67);
 }
 
 .hero-menu a:hover {

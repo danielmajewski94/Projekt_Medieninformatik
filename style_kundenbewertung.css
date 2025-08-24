@@ -67,8 +67,8 @@
 
 #Rating-Textarea {
     border: 0pt;
-    border-left: 2px solid #084D0F;
-    border-top: 2px solid #084D0F;
+    border-left: 2px solid grey;
+    border-top: 2px solid grey;
     min-height: 50pt;
     height: auto;
     padding: 2px;
@@ -77,8 +77,8 @@
 
 .Rating-Texttitle {
     border: 0pt;
-    border-left: 2px solid #084D0F;
-    border-bottom: 2px solid #084D0F;
+    border-left: 2px solid grey;
+    border-bottom: 2px solid grey;
     height: auto;
     padding: 2px;
     border-radius: 10px;

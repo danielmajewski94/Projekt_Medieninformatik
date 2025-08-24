@@ -92,7 +92,7 @@ h1 {
 }
 
 .Modal-button:hover {
-    color: #084D0F;
+    color: grey;
     transform: scale(1.2);
 }
 
@@ -170,9 +170,9 @@ h1 {
 }
 
 .ss_btn_contact:hover {
-    background-color: #084D0F;
+    background-color: grey;
     color: white;
-    border: 1px solid #084D0F;
+    border: 1px solid grey;
 }
 
 #btn_datenschutz:hover {

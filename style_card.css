@@ -56,7 +56,7 @@
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: #084D0F;
+    background-color: grey;
     /* Standardfarbe */
     border: none;
     color: white;
@@ -65,7 +65,7 @@
 }
 
 .card-footer .btn:hover {
-    background-color: #084D0F;
+    background-color: grey;
     /* Farbe beim Hover */
 }
 
@@ -100,7 +100,7 @@
     top: -30px;
     border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-image: linear-gradient(to right, #084D0F, #013506);
+    background-image: linear-gradient(to right, grey, black);
     padding-top: 10px;
 }
 
@@ -174,7 +174,7 @@ i {
 
 .card_contact_body ul li h4 {
     left: 58px;
-    color: #084D0F;
+    color: grey;
     margin-bottom: .0rem;
     font-size: 16px;
 }
@@ -184,12 +184,12 @@ i {
     left: 59px;
     font-size: 12px;
     font-family: sans-serif;
-    color: #084D0F;
+    color: grey;
 }
 
 .card_contact_body ul li i {
     left: 8px;
-    color: #084D0F;
+    color: grey;
     font-size: 26px;
 }
 
@@ -210,7 +210,7 @@ i {
 }
 
 .card_contact_body li:hover {
-    background-color: #084D0F;
+    background-color: grey;
     cursor: pointer;
 }
 
@@ -238,7 +238,7 @@ i {
     width: 95%;
     margin: 0 auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-image: linear-gradient(to right, #084D0F, #013506);
+    background-image: linear-gradient(to right, grey, grey);
 }
 
 .card_contact_footer ul {
