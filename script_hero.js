@@ -34,19 +34,3 @@ function animate() {
 }
 
 animate();
-
-document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll('.item');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show'); // einblenden
-            } else {
-                entry.target.classList.remove('show'); // ausblenden
-            }
-        });
-    }, { threshold: 0.1 }); // 10% Sichtbarkeit triggern
-
-    items.forEach(item => observer.observe(item));
-});

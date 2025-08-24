@@ -106,12 +106,12 @@
     </section>
 
     <div class="grid-container">
-        <div class="item cell-2">
+        <div class="item item_animate cell-2">
             <p style="text-align: left;">
             <h1>Kontakt</h1>
             </p>
         </div>
-        <div class="item cell-2 con_kontaktdaten">
+        <div class="item item_animate cell-2 con_kontaktdaten">
             <div class="con_daten" style="text-align: center;">
                 <h1>Daniel Majewski</h1>
                 <p>
@@ -121,7 +121,7 @@
                 </p>
             </div>
         </div>
-        <div class="item cell-2">
+        <div class="item item_animate cell-2">
             <form id="contactForm" class="uem_ContactForm">
                 <p>
                 <div class="mb-3">
@@ -201,6 +201,24 @@
                     alert('Fehler beim Senden der E-Mail.');
                 });
         }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll('.item_animate'); // nur die animierbaren
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show'); // einblenden
+                    } else {
+                        entry.target.classList.remove('show'); // ausblenden
+                    }
+                });
+            }, { threshold: 0.1 }); // 10% Sichtbarkeit triggern
+
+            items.forEach(item => observer.observe(item));
+        });
     </script>
 </body>
 

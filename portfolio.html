@@ -103,8 +103,8 @@
             </nav>
         </div>
     </section>
-    <div class="portfolio-ueb">Portfolio</div>
-    <div class="masonry-gallery">
+    <div class="portfolio-ueb item_animate">Portfolio</div>
+    <div class="masonry-gallery item_animate">
         <img src="Bilder/BX3A4429.png" alt="Bild 1" onclick="openModal(this.src)">
         <img src="Bilder/BX3A9169a.jpg" alt="Bild 2" onclick="openModal(this.src)">
         <img src="Bilder/BX3A9256.jpg" alt="Bild 3" onclick="openModal(this.src)">
@@ -168,6 +168,24 @@
             if (event.target.tagName === 'IMG') {
                 event.preventDefault();
             }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll('.item_animate'); // nur die animierbaren
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show'); // einblenden
+                    } else {
+                        entry.target.classList.remove('show'); // ausblenden
+                    }
+                });
+            }, { threshold: 0.1 }); // 10% Sichtbarkeit triggern
+
+            items.forEach(item => observer.observe(item));
         });
     </script>
 </body>

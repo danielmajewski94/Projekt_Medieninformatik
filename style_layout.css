@@ -24,6 +24,17 @@
     max-width: 100%;
 }
 
+.item_animate {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.item_animate.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .empty-item {
     display: none;
 }
@@ -104,11 +115,6 @@
 
 .navbar-toggler {
     border: 1px solid white;
-}
-
-.item.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 

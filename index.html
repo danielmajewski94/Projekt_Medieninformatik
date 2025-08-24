@@ -113,10 +113,10 @@
 
 
     <div class="grid-container">
-        <div class="item ss_contact">
+        <div class="item item_animate ss_contact">
             <img src="Bilder/Vorschau/DSC_5161Lr.png" class="bild" style="width: 50%; border-radius: 10px;">
         </div>
-        <div class="item cell-1">
+        <div class="item item_animate cell-1">
             <h1>Der Fotograf für deine schönsten Momente!</h1>
             <p class="txt1">Jedes Foto erzählt eine einzigartige Geschichte.<br>In der Kunst des Augenblicks finde ich
                 meine
@@ -126,10 +126,10 @@
                 bewahrt wird.</p>
             <button class="ss_btn_contact" data-bs-toggle="modal" data-bs-target="#ModalKontakt">Schreib mir!</button>
         </div>
-        <div class="item cell-2">
+        <div class="item item_animate cell-2">
             <h1>Habe ich dein Interesse geweckt?</h1>
         </div>
-        <div class="item">
+        <div class="item item_animate">
             <div class="ss_image">
                 <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalVorstellung"
                     style="--background-image: url('Bilder/png/IMG_8634.png')">
@@ -139,7 +139,7 @@
                 </button>
             </div>
         </div>
-        <div class="item">
+        <div class="item item_animate">
             <div class="ss_image">
                 <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalUmfrage"
                     style="--background-image: url('Bilder/png/IMG_9588.png')">
@@ -151,7 +151,7 @@
                 </button>
             </div>
         </div>
-        <div class="item">
+        <div class="item item_animate">
             <div class="ss_image">
                 <button class="Modal-button" data-bs-toggle="modal" data-bs-target="#ModalFAQ"
                     style="--background-image: url('Bilder/png/BX3A9256.png')">
@@ -161,13 +161,13 @@
                 </button>
             </div>
         </div>
-        <div class="item empty-item">
+        <div class="item item_animate empty-item">
         </div>
         <div class="item cell-2 scroll-element hidden">
             <h1>Einzigartige Aufnahmen für deine schönsten Momente</h1>
         </div>
 
-        <div class="item cell-2">
+        <div class="item item_animate cell-2">
             <div id="Bilderblock" class="image-grid">
                 <div class="ss_image">
                     <a href="#" onclick="openModal('Bilder/BX3A9169a.jpg'); return false;">
@@ -832,6 +832,24 @@
                     alert('Fehler beim Senden der E-Mail.');
                 });
         }
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const items = document.querySelectorAll('.item_animate'); // nur die animierbaren
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show'); // einblenden
+                    } else {
+                        entry.target.classList.remove('show'); // ausblenden
+                    }
+                });
+            }, { threshold: 0.1 }); // 10% Sichtbarkeit triggern
+
+            items.forEach(item => observer.observe(item));
+        });
     </script>
 
 </body>
