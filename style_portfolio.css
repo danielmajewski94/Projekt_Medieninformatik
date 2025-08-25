@@ -72,7 +72,7 @@
 }
 
 .portfolio-ueb {
-    font-size: 10rem;
+    font-size: clamp(12px, 20vw, 120px);
     font-family: 'Licorice', cursive;
     color: grey;
     margin: 0 auto;
