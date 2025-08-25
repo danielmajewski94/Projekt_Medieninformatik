@@ -47,6 +47,10 @@
     border: 1px solid #ccc;
 }
 
+.caontact-text {
+    font-size: clamp(16px, 5vw, 24px);
+}
+
 @media screen and (max-width: 1330px) {
 
     .pft-imagecontainer {

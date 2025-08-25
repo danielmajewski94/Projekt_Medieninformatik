@@ -125,7 +125,7 @@
     border-radius: 0.25rem;
     text-decoration: none;
     transition: all 0.2s;
-    font-size: 2rem;
+    font-size: clamp(12px, 2rem, 32px);
     color: rgb(67, 67, 67);
 }
 
@@ -134,7 +134,7 @@
 }
 
 .hero-ueb {
-    font-size: 10rem;
+    font-size: clamp(12px, 15vw, 150px);
     font-family: 'Licorice', cursive;
     color: grey;
 }
@@ -161,31 +161,8 @@
     transition: background-color 0.3s, opacity 0.3s;
 }
 
-@media screen and (max-width: 930px) {
+@media screen and (max-width: 930px) {}
 
-    .hero-ueb {
-        font-size: 8rem;
-        font-family: 'Licorice', cursive;
-        color: grey;
-    }
+@media screen and (max-width: 768px) {}
 
-    @media screen and (max-width: 768px) {
-
-        .hero-ueb {
-            font-size: 6rem;
-            font-family: 'Licorice', cursive;
-            color: grey;
-        }
-
-
-
-    }
-
-    @media screen and (max-width: 550px) {
-
-        .hero-ueb {
-            font-size: 4rem;
-            font-family: 'Licorice', cursive;
-            color: grey;
-        }
-    }
+@media screen and (max-width: 550px) {}

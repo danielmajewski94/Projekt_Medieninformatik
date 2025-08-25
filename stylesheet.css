@@ -274,10 +274,10 @@ h1 {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1500px) {
 
     .image-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     h1 {
@@ -286,14 +286,27 @@ h1 {
 
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 1085px) {
 
     .image-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    h1 {
+        font-size: 36pt;
+    }
+
+}
+
+@media screen and (max-width: 730px) {
+
+    .image-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .Modal-button {
-        font-size: 5vw;
+        font-size: 8vw;
     }
 
     .ss_buttonausrichtung {
