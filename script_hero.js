@@ -1,4 +1,3 @@
-
 const heroText = document.getElementById("hero-text");
 const menu = document.getElementById("menu");
 menu.classList.add("hidden");
@@ -7,9 +6,10 @@ let targetTextY = 0;
 let currentTextY = 0;
 const speed = 0.08;
 
-const heroHeight = document.querySelector('.hero').offsetHeight;
+const hero = document.querySelector('.hero');
+const heroHeight = hero.offsetHeight;
 
-window.addEventListener("scroll", () => {
+function updateMenuVisibility() {
     const scrollY = window.scrollY;
 
     // Text leicht nach oben scrollen
@@ -17,14 +17,21 @@ window.addEventListener("scroll", () => {
 
     // Menü nur anzeigen, wenn über Hero gescrollt
     if (scrollY > heroHeight) {
-        menu.classList.remove("hidden"); // sichtbar
-        menu.classList.add("blue");      // blau
+        menu.classList.remove("hidden");
+        menu.classList.add("blue");
     } else {
-        menu.classList.add("hidden");    // ausblenden
+        menu.classList.add("hidden");
         menu.classList.remove("blue");
     }
-});
+}
 
+// Eventlistener für Scroll
+window.addEventListener("scroll", updateMenuVisibility);
+
+// Direkt beim Laden einmal prüfen
+document.addEventListener("DOMContentLoaded", updateMenuVisibility);
+
+// Animation für heroText
 function animate() {
     if (heroText) {
         currentTextY += (targetTextY - currentTextY) * speed;
