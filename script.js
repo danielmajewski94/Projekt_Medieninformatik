@@ -1,9 +1,10 @@
 
-document.getElementById("btn_datenschutz").addEventListener("click", function () {
-    window.open("Dokumente/Datenschutz.pdf", "_blank");
-});
 
 document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("btn_datenschutz").addEventListener("click", function () {
+        window.open("Dokumente/Datenschutz.pdf", "_blank");
+    });
+
     // Überprüfen, ob der Nutzer die Cookies bereits akzeptiert oder abgelehnt hat
     if (!localStorage.getItem("cookies-accepted") && !localStorage.getItem("cookies-declined")) {
         document.getElementById("cookie-modal").style.display = "block"; // Modal anzeigen
