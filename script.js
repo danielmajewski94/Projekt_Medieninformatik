@@ -28,11 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("cookie-modal").style.display = "none";
     });
 
-    // Event Listener für das Schließen des Modals über das "X"-Symbol
-    document.getElementById("close-modal").addEventListener("click", function () {
-        document.getElementById("cookie-modal").style.display = "none";
-    });
-
     // Schließen des Modals, wenn der Nutzer außerhalb des Modals klickt
     window.addEventListener("click", function (event) {
         if (event.target === document.getElementById("cookie-modal")) {

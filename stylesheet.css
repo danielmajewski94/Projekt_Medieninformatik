@@ -243,16 +243,6 @@ h1 {
     position: relative;
 }
 
-/* Das "Schließen"-Symbol */
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 .cookie-button {
     background-color: #4CAF50;
     color: white;
